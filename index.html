@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+
+    <title>DinariPay</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../Teste-DinariPay/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Teste-DinariPay/css/style.css">
+    <link rel="icon" type="imagem/png" href="../Teste-DinariPay/images/icone2.png" />
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@200;300;500&display=swap" rel="stylesheet">
+    
+    <!-- JQuery e Plugins -->
+    <script src="../Teste-DinariPay/jQuery/jquery-3.6.0.js"></script>
+    <script src="../Teste-DinariPay/jQuery/jQuery-Mask-Plugin-master/src/jquery.mask.js"></script>
+
+   
+  </head>
+
+
+  <body class="text-center">
+
+<!-- Tela Inicial-->
+   <main class="container">
+        <div class="row">
+            <div class="col-md-6 logoMain">
+                <img src="../Teste-DinariPay/images/logo.jpg" class="img-fluid" ><!--Logo-->
+            </div>
+            <div class="col-md-6 txtMain">
+                <h2 class="tituloMain mt-2">Estamos afim de te conhecer melhor!</h2>
+                <p class="paragrafoMain">Por favor, acesse o formulário abaixo e responda todos os campos!</p>
+
+                <button class="btn btn-lg btn-block btform mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Formulário</button> 
+            </div>
+        </div>
+    </main>                                  
+<!-- Tela Inicial -->
+
+
+  
+    <!-- Modal Formulário -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        
+        <div class="modal-content">
+               
+            <div class="modal-body ">
+
+                    <!-- Logo Modal -->
+                    <div class="py-2 text-center">
+                        <img src="../Teste-DinariPay/images/logo.png" class="mb-4 d-block mx-auto" width="279" height="60">
+                    </div>
+                <!-- Main Modal -->    
+                <div class="container text-start rounded-3 contForm pt-5" style="background-color:rgb(223, 221, 221) ;">
+                    
+                    <!--Titulo Modal-->
+                    <div class="text-center">
+                        <h2>Formulário</h2>
+                        <p>Preencha o formulário com atenção.</p>
+                    </div>
+      
+                    <form class="row g-3 px-5 py-3" id="form" novalidate>
+                
+                            <!-- Nome e Sobrenome -->
+                            <div class="col-sm-6">
+                                <label for="nome" class="form-label">Nome</label>
+                                <input type="text" class="form-control" id="nome" name="nome" placeholder="Lucas">
+                                <span id="nome-error"class="error" for="nome" style="display:none;">se fudeu </span>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="sobrenome" class="form-label">Sobrenome</label>
+                                <input type="text" class="form-control" id="sobrenome" name="sobrenome" placeholder="Florindo Souza">
+                            </div>
+                
+                            <!-- CPF -->
+                            <div class="col-md-6">
+                                <label for="cpf" class="form-label">CPF</label>
+                                <input type="text" class="form-control" id="cpf" name="cpf"placeholder="XXX-XXX-XXX-XX" >
+                            </div>
+                
+                            <!-- Data de Nascimento -->
+                            <div class="col-md-6">
+                                <label for="dataDeNascimento" class="form-label">Data de Nascimento</label>
+                                <input type="date" class="form-control" id="dataDeNascimento"  name="dataDeNascimento" min="1910-01-01" max="2006-12-30">
+                            </div>
+                
+                            <!-- Gênero -->
+                            <div class="mb-3" id="genero">
+                                <label class="form-label">Gênero</label>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" id="generoMasc" name="escolhaGenero"  >
+                                    <label for="generoMasc">Masculino</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" id="generoFem" name="escolhaGenero" >
+                                    <label for="generoFem">Feminino</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" id="generoNda" name="escolhaGenero" checked >
+                                    <label for="generoNda">Prefiro não indentificar</label>
+                                </div>
+                            </div>
+                
+                            <hr class="my-4">  
+                
+                            <!-- E-mail -->
+                            <div class="col-12">
+                                <label for="email" class="form-label">E-mail</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="username@gmail.com" >
+                            </div>
+                
+                            <!-- Senha e sua confirmação -->
+                            <div class="col-lg-6">
+                                <label for="password" class="form-label">Senha</label>
+                                <input type="password" class="form-control" placeholder="Senha" id="password" name="password">
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="confirmPass" class="form-label">Confirmação da Senha</label>
+                                <input type="password" class="form-control" placeholder="Confirmação da Senha"id="confirmPass" name="confirmPass">
+                            </div>
+                
+                            <!-- Botões -->
+                            <div class="col-12" >
+                                <div class="row mt-5">
+                                    <div class="col text-center"><button class="btn btn-outline-secondary btn-lg btn-block" data-bs-dismiss="modal" id='reset' type="button">Voltar</button></div> 
+                                    <div class="col text-center"><button class="btn btn-secondary btn-lg btn-block" type="submit" id='enviarForm'>Enviar</button></div>
+                                </div>
+                            </div>
+                    </form>
+                
+                </div><!-- Main Modal -->
+
+            </div><!-- modal-body -->
+      
+        </div><!--modal-content-->
+    
+    </div><!--modal-dialog-->
+
+</div>
+    <!-- Modal Formulário-->
+
+<!-- modal 2 -->
+<button type="button" class="btn btn-primary" id="botaoModalEnviar"data-bs-toggle="modal" style="display: none;" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button>
+  
+<!-- JavaScript -->
+
+<script src="../Teste-DinariPay/script/bootstrap.bundle.js"></script>
+<script src="../Teste-DinariPay/jQuery/jQuery-Validation/dist/jquery.validate.js"></script>
+<script src="../Teste-DinariPay/jQuery/jQuery-Validation/dist/additional-methods.js"></script>
+<script src="../Teste-DinariPay/jQuery/jQuery-Validation/dist/localization/messages_pt_BR.js"></script>
+<script src="../Teste-DinariPay/script/script.js"></script>
+   
+  </body>
+</html>

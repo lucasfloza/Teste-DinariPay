@@ -1,0 +1,44 @@
+/* Configurações Padrão do site */
+
+*{margin: 0;padding: 0;box-sizing: border-box;}
+
+html,body{height: 100%;}
+
+
+/* Detalhes no corpo do site */
+ body{
+    background-color: #151414;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tituloMain,.paragrafoMain{color: white;}
+
+
+.contForm{font-family: Albert Sans;}
+
+.btform{
+    width: 200px;
+    border: none;
+    background: linear-gradient(90deg, rgba(92,193,57,1) 0%, rgba(0,255,201,1) 100%);
+}
+
+
+/* Layout de Validação */
+.error{
+    color: red
+}
+
+/* Responsividade de alguns itens*/
+
+@media (max-width: 1200px){
+    .logoMain{
+        width: 100%;
+    }
+    .txtMain{
+        width: 100%;
+        margin-top: 50px;
+    }
+
+}
